@@ -1,1 +1,4 @@
+*.so
+*~
 docker
+pysndfile/build

@@ -16,4 +16,5 @@ RUN apt-get install -y
 RUN cd libsndfile && ./autogen.sh && ./configure && make
 
 # notebookをgithubから落とす
+ADD dummyfile /tmp
 RUN git clone --depth 1 https://github.com/wrist/pydata-osaka3

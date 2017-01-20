@@ -1,5 +1,4 @@
 *.so
 *~
-docker
 pysndfile/build
 rectangle/build

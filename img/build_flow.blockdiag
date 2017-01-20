@@ -1,0 +1,16 @@
+# vim:fileencoding=utf-8
+blockdiag {
+    default_fontsize = 16;
+    default_shape = roundedbox;
+    node_width = 160;
+    node_height = 60;
+
+    A [ label = "Cython Source\nFile(.pyx)"];
+    B [ label = "C Extensinon\nFIle(.c)" ];
+    C [ label = "Python Extension\nModule(.so)" ];
+    D [ label = "Library Files\n(if wrapping)\n(*.h, *.c)" ];
+
+    A -> B [label = "cython", fontsize = 12];
+    B -> C [label = "compile", folded, fontsize = 12];
+    D -> C [label = "compile", fontsize = 12];
+}

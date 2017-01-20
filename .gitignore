@@ -2,3 +2,6 @@
 *~
 pysndfile/build
 rectangle/build
+.ipynb_checkpoints
+c_fib.pyx
+c_fib.c

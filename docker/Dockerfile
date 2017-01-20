@@ -15,5 +15,5 @@ RUN git clone https://github.com/erikd/libsndfile
 RUN apt-get install -y 
 RUN cd libsndfile && ./autogen.sh && ./configure && make
 
-# 自分のnotebookをgithubから落とす
-RUN git clone https://github.com/wrist/pydata-osaka3
+# notebookをgithubから落とす
+RUN git clone --depth 1 https://github.com/wrist/pydata-osaka3

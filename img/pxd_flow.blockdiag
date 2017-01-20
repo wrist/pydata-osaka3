@@ -7,12 +7,15 @@ blockdiag {
     span_width = 250;
     span_width = 150;
 
-    A [ label = "Cython Source\nFile(.pyx)"];
+    A [ label = "Cython Source\nFile(.pyx)" ];
     B [ label = "C Extensinon\nFIle(.c)" ];
     C [ label = "Python Extension\nModule(.so)" ];
     D [ label = "Library Files\n(if wrapping)\n(*.h, *.c)" ];
+    E [ label = "Cython Definition\nFile(.pxd)" ];
 
-    A -> B [label = "cython", fontsize = 18];
-    B -> C [label = "compile", folded, fontsize = 18];
+    A -> B [label = "cython",  fontsize = 18];
+    A -> E [label = "refer",   fontsize = 18, style = dashed];
+    B -> C [label = "compile", fontsize = 18];
     D -> C [label = "compile", fontsize = 18];
+    E -> D [label = "refer",   fontsize = 18, style = dashed];
 }

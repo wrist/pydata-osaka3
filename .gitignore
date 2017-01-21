@@ -1,6 +1,7 @@
 *.so
 *~
 pysndfile/build
+pysndfile/__pycache__
 rectangle/build
 .ipynb_checkpoints
 build
